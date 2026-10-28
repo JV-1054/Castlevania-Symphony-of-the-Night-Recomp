@@ -45,6 +45,7 @@ aspect_ratio = "4:3"
 
 [controller]
 default_mode = "digital"
+default_p1_device = "gamepad"
 
 # Online mount gate: digests + track count + optional TOC fingerprint
 # (see docs/NETPLAY.md).

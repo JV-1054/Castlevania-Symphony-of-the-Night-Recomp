@@ -16,6 +16,12 @@ cmake -S . -B build-sotn -G Ninja -DCMAKE_BUILD_TYPE=Release -DPSX_REWIND=OFF
 cmake --build build-sotn --target psx-runtime --parallel 12
 ```
 
+## Controller support
+
+Player 1 defaults to the first connected game controller. Connect a controller
+before launching the game; controller button mappings can be edited in
+`input.ini` beside the executable. The PlayStation pad defaults to digital mode.
+
 The project config points to `isos/Castlevania - Symphony of the Night (USA).cue`,
 which references the two BIN tracks in the same directory. Disc files are local
 inputs and are not included in this repository.
