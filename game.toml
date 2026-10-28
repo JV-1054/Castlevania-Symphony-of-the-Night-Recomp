@@ -1,0 +1,54 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Castlevania: Symphony of the Night"
+id = "SLUS-00067"
+players = 1
+exe = "disc/SLUS_000.67"
+disc = "isos/Castlevania - Symphony of the Night (USA).cue"
+load_address = "0x80010000"
+entry_pc = "0x80010DFC"
+text_size = "0x00089000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Castlevania - Symphony of the Night (USA) (Track 1).bin"
+cue_name = "Castlevania - Symphony of the Night (USA).cue"
+boot_exe = "SLUS_000.67"
+known_sizes = [538655040]
+known_md5 = [
+  "acbb3a2e4a8f865f363dc06df147afa2",
+]
+known_sha1 = [
+  "f967119e006695a59a6442237f9fc7c7811cf7bf",
+]
+known_crc32 = [
+  "05be47b2",
+]
+
+[recompiler]
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+window_title = "Castlevania: Symphony of the Night Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 2
+required_disc_fp = "38b061c54bfdcd39f5efd5fcf87e4d59e4c88dad48566a342027e535af4b961c"

@@ -1,0 +1,13 @@
+{
+  "$schema": "https://recomp.fyi/schema/v1.json",
+  "game": "Castlevania: Symphony of the Night",
+  "system": "PS1",
+  "type": "recomp",
+  "toolchain": "psxrecomp",
+  "status": "exploring",
+  "project": "Castlevania Symphony of the Night Recomp",
+  "original": {
+    "region": "USA",
+    "serial": "SLUS-00067"
+  }
+}
